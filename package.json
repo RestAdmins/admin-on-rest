@@ -1,6 +1,6 @@
 {
-  "name": "admin-on-rest",
-  "version": "0.9.2",
+  "name": "admin-on-rest2",
+  "version": "1.0.0",
   "description": "A frontend Framework for building admin applications on top of REST services, using ES6, React and Material UI",
   "files": [
     "*.md",
@@ -10,7 +10,8 @@
   ],
   "main": "lib/index",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "build-lib": "cross-env NODE_ENV=production ./node_modules/.bin/babel ./src -d lib --ignore '*.spec.js'"
   },
   "authors": [
     "François Zaninotto"
@@ -32,6 +33,7 @@
     "babel-preset-react": "~6.16.0",
     "babel-preset-stage-0": "~6.16.0",
     "babel-register": "~6.18.0",
+    "cross-env": "^3.2.4",
     "css-loader": "~0.26.0",
     "enzyme": "~2.6.0",
     "eslint": "~3.11.0",

@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import ContentSave from 'material-ui/svg-icons/content/save';
-import CircularProgress from 'material-ui/CircularProgress';
 import translate from '../../i18n/translate';
 
 class SaveButton extends Component {
@@ -21,22 +19,18 @@ class SaveButton extends Component {
             ? <RaisedButton
                 type="submit"
                 label={label && translate(label)}
-                icon={saving ? <CircularProgress size={25} thickness={2} /> : <ContentSave />}
                 onClick={this.handleClick}
                 primary={!saving}
                 style={{
-                    margin: '10px 24px',
                     position: 'relative',
                 }}
             />
             : <FlatButton
                 type="submit"
                 label={label && translate(label)}
-                icon={saving ? <CircularProgress size={25} thickness={2} /> : <ContentSave />}
                 onClick={this.handleClick}
                 primary={!saving}
                 style={{
-                    margin: '10px 24px',
                     position: 'relative',
                 }}
             />

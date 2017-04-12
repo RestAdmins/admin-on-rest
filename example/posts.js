@@ -42,7 +42,7 @@ const PostFilter = ({ ...props }) => (
     <Filter {...props}>
         <TextInput label="post.list.search" source="q" alwaysOn />
         <TextInput source="title" defaultValue="Qui tempore rerum et voluptates" />
-        <QuickFilter label="resources.posts.fields.commentable" source="commentable" defaultValue={true} />
+        <QuickFilter label="Comentable?" source="commentable" defaultValue={true} />
     </Filter>
 );
 
@@ -72,9 +72,12 @@ export const PostList = ({ ...props }) => (
     </List>
 );
 
-const PostTitle = translate(({ record, translate }) => {
-    return <span>{record ? translate('post.edit.title', { title: record.title }) : ''}</span>;
-});
+const PostTitle =
+    translate(
+        ( { record, translate } ) => {
+            return <span>{record ? translate('post.edit.title', { title: record.title }) : ''}</span>;
+        }
+    );
 
 export const PostCreate = ({ ...props }) => (
     <Create {...props}>
